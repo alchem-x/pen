@@ -1,0 +1,5 @@
+import './style.css'
+import { Vue } from './dependencies.js'
+import App from './App.js'
+
+Vue.createApp(App).mount('#app')
