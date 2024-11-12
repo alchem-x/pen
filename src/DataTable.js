@@ -1,6 +1,4 @@
-import { Vue } from './dependencies.js'
-
-const { computed } = Vue
+import { computed } from 'vue'
 
 export default {
     template: `

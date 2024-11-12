@@ -1,4 +1,3 @@
-import { Vue, saveAs } from './dependencies.js'
 import { getFileExtension, LANGUAGE_TYPE, languageOptions } from './language.js'
 import { changeLanguage } from './urlSearchParams.js'
 import runJs from './runJs.js'
@@ -7,8 +6,8 @@ import Button from './Button.js'
 import UrlInput from './UrlInput.js'
 import { querySql } from './sql.js'
 import { readAsText } from './file.js'
-
-const { computed } = Vue
+import { computed } from 'vue'
+import { saveAs } from 'file-saver'
 
 export default {
     template: `
@@ -135,7 +134,7 @@ export default {
             showSaveButton,
             saveToFile,
             onSqlQueryUrlInput,
-            indexUrl: location.pathname.startsWith('/js-pen/') ? '/js-pen/' : '/'
+            indexUrl: location.pathname.startsWith('/pen/') ? '/pen/' : '/'
         }
     },
     components: {

@@ -69,8 +69,8 @@ export default function defineConfig(env) {
         ],
         resolve: {
             alias: {
-                '@': resolve(import.meta.dirname, 'web'),
-                 vue: 'vue/dist/vue.esm-bundler.js',
+                '@': resolve(import.meta.dirname, 'src'),
+                 'vue': 'vue/dist/vue.esm-bundler.js',
             },
         },
         optimization: {

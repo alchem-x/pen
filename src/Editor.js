@@ -1,6 +1,5 @@
-import { monaco, Vue } from './dependencies.js'
-
-const { onMounted, ref, watch } = Vue
+import * as monaco from 'monaco-editor'
+import { onMounted, ref, watch } from 'vue'
 
 export default {
     template: `

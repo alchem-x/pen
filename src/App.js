@@ -1,5 +1,4 @@
 import { getContentValue, getLanguage, updateContentValue } from './urlSearchParams.js'
-import { Vue } from './dependencies.js'
 import Editor from './Editor.js'
 import Header from './Header.js'
 import DataTable from './DataTable.js'
@@ -7,8 +6,7 @@ import { LANGUAGE_TYPE } from './language.js'
 import { getSqlQueryUrl, saveSqlQueryUrl } from './sql.js'
 import { debounce } from './schedule.js'
 import { isMobile } from './ua.js'
-
-const { reactive, watch, computed, ref, onMounted } = Vue
+import { reactive, watch, computed, ref, onMounted } from 'vue'
 
 export default {
     template: `
