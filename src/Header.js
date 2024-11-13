@@ -19,7 +19,7 @@ export default {
         <UrlInput v-if="isQueryMode"
                   :value="state.sqlQueryUrl"
                   :on-input="onSqlQueryUrlInput"/>
-        <Button v-if="showOpenFileButton" style="width: 60px;" :on-click="openFile">打开文件</Button>
+        <Button v-if="showOpenFileButton" style="width: 60px;" :on-click="openFile">打开</Button>
         <Button v-if="showRunButton" style="width: 60px;" :on-click="run">运行</Button>
         <Button v-if="showSaveButton" style="width: 60px;" :on-click="saveToFile">保存</Button>
         <Select style="width: 100px;"
