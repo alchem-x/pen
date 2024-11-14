@@ -20,6 +20,14 @@ body {
     height: 40px;
 }
 
+.header .title {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    width: 100%;
+    padding-right: 16px;
+}
+
 .main {
     --editor-container-height: 0px;
 

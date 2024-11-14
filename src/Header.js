@@ -12,21 +12,26 @@ import { saveAs } from 'file-saver'
 export default {
     template: `
       <header class="header">
-      <a class="no-underline whitespace-nowrap" :href="indexUrl">
-        <strong class="color-black select-none text-base">Pen</strong>
-      </a>
-      <div class="flex items-center" style="gap: 8px;">
-        <UrlInput v-if="isQueryMode"
-                  :value="state.sqlQueryUrl"
-                  :on-input="onSqlQueryUrlInput"/>
-        <Button v-if="showOpenFileButton" style="width: 60px;" :on-click="openFile">打开</Button>
-        <Button v-if="showRunButton" style="width: 60px;" :on-click="run">运行</Button>
-        <Button v-if="showSaveButton" style="width: 60px;" :on-click="saveToFile">保存</Button>
-        <Select style="width: 100px;"
-                :value="state.language"
-                :options="languageOptions"
-                :on-change="onLanguageChange"/>
-      </div>
+        <div class="title">
+            <a class="no-underline whitespace-nowrap" :href="indexUrl">
+                <strong class="color-black select-none text-base">Pen</strong>
+            </a>
+            <a class="no-underline whitespace-nowrap" :href="ghUrl" target="_blank">
+                <strong class="color-black select-none text-base">GitHub</strong>
+            </a>
+        </div>
+        <div class="flex items-center" style="gap: 8px;">
+            <UrlInput v-if="isQueryMode"
+                    :value="state.sqlQueryUrl"
+                    :on-input="onSqlQueryUrlInput"/>
+            <Button v-if="showOpenFileButton" style="width: 60px;" :on-click="openFile">打开</Button>
+            <Button v-if="showRunButton" style="width: 60px;" :on-click="run">运行</Button>
+            <Button v-if="showSaveButton" style="width: 60px;" :on-click="saveToFile">保存</Button>
+            <Select style="width: 100px;"
+                    :value="state.language"
+                    :options="languageOptions"
+                    :on-change="onLanguageChange"/>
+        </div>
       </header>
     `,
     props: {
@@ -134,7 +139,8 @@ export default {
             showSaveButton,
             saveToFile,
             onSqlQueryUrlInput,
-            indexUrl: location.pathname.startsWith('/pen/') ? '/pen/' : '/'
+            indexUrl: location.pathname.startsWith('/pen/') ? '/pen/' : '/',
+            ghUrl: 'https://github.com/alchem-x/pen',
         }
     },
     components: {
