@@ -1,4 +1,4 @@
-import * as monaco from 'monaco-editor'
+import { editor as MonacoEditor } from 'monaco-editor'
 import { onMounted, ref, watch } from 'vue'
 
 export default {
@@ -22,7 +22,7 @@ export default {
         })
 
         onMounted(() => {
-            editor = monaco.editor.create(editorContainerRef.value, {
+            editor = MonacoEditor.create(editorContainerRef.value, {
                 value: props.state.contentValue,
                 language: props.state.language,
                 automaticLayout: true,
