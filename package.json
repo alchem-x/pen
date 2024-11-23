@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "webpack serve",
     "watch": "webpack --watch",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "clean": "rm -rf dist"
+  },
+  "imports": {
+    "#src/*": "./src/*"
   },
   "type": "module",
   "keywords": [],
